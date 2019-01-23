@@ -1,0 +1,83 @@
+// Colors
+$firstColor     : #3998d4;
+$firstColorAlt  : #9ccaed;
+$secondColor    : #262f42;
+$secondColorAlt : #2f3a52;
+$thirdColor     : #FF3C32;
+$thirdColorAlt  : #FF2419;
+$accentColor    : #FBA905;
+$accentColorAlt : #F1A000;
+
+// Complementary colors
+$darkColor   : #282D31;
+$borderColor : #e2e7ec;
+$textColor   : #53575A;
+$bodyBg      : #FAFDFF;
+
+// Mixin lighten & darken generate's CSS variables
+@mixin colors($property, $value, $lighten: 0, $darken: 0) {
+  // Lightens
+  @if ($lighten != 0) {
+    $light: $value;
+    @for $i from 1 through $lighten {
+      @if $light != white {
+        $light: lighten($value, percentage($i*0.05));
+        #{$property}-light-#{$i}: #{$light};
+      }
+    }
+  }
+  #{$property}-color: #{$value};
+  // Darkens
+  @if ($darken != 0) {
+    $dark: $value;
+    @for $i from 1 through $darken {
+      @if $dark != black {
+        $dark: darken($value, percentage($i*0.05));
+        #{$property}-dark-#{$i}: #{$dark};
+      }
+    }
+  }
+}
+
+// Mixin rbga generate CSS variable
+@mixin rgba($property, $val, $alpha: 0) {
+  #{$property}-rgb-#{$alpha*10}: #{rgba($val, $alpha)};
+}
+
+// map for colors
+$primaryColors: (
+  --first: $firstColor,
+  --second: $secondColor,
+  --third: $thirdColor,
+  --accent: $accentColor,
+  --dark: $darkColor,
+);
+
+:root{
+  // Colors
+  @include colors    (--first, $firstColor, 15,15);
+  --first-color-alt  : #{$firstColorAlt};
+  @include colors    (--second,$secondColor,3,2);
+  --second-color-alt : #{$secondColorAlt};
+  @include colors    (--third, $thirdColor, 3,2);
+  --third-color-alt  : #{$thirdColorAlt};
+  @include colors    (--accent,$accentColor,3,2);
+  --accent-color-alt : #{$accentColorAlt};
+  
+  // Complementary colors
+  --dark-color       : #{$darkColor};
+  --border-color     : #{$borderColor};
+  --text-color       : #{$textColor};
+  --body-bg          : #{$bodyBg};
+
+  // RGBA colors
+  @include rgba(--border, $borderColor, .2);
+  @include rgba(--border, $borderColor, .5);
+  @each $key, $value in $primaryColors {
+    // RBGA para tablas, example: --first-rgb-1:
+    @include rgba($key, $value, .1);
+    @include rgba($key, $value, .3);
+    @include rgba($key, $value, .7);
+    @include rgba($key, $value, .9);
+  }
+}

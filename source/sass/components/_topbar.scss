@@ -1,0 +1,49 @@
+[class*="topbar"] {
+  background : var(--first-color);
+  color: #fff;
+  font-size : var(--small);
+
+  .rex-item {
+    display : flex;
+    align-items: center;
+
+    @include from(l) {
+      height : rem(64px);
+    }
+
+    @include to(l) {
+      padding-top : .5rem;
+      padding-bottom : .5rem;
+      justify-content: center;
+    }
+  }
+
+  p, .button, form, input, a {
+    margin-top : 0;
+    margin-bottom : 0;
+    color: inherit;
+  }
+
+  form {
+    flex: auto;
+    @include showFrom(l);
+  }
+
+  input {
+    border : none;
+    background : #fff img('icon-search.svg') center right 1rem / 1rem no-repeat !important;
+  }
+
+  [class*="button"] {
+    padding-top : .5rem;
+    padding-bottom : .5rem;
+    margin-right : 0;
+    margin-left : 2rem;
+  }
+}
+
+// Color variations
+.topbar--secondary { background : var(--second-color) }
+.topbar--tertiary  { background : var(--third-color)  }
+.topbar--accent    { background : var(--accent-color) }
+.topbar--dark      { background : var(--dark-color)   }

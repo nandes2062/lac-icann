@@ -1,0 +1,107 @@
+// This file doesn't generate any css
+@mixin button {
+  display         : inline-block;
+  padding         : 1em 2em;
+  background      : var(--first-color);
+  color           : #FFF;
+  margin-right    : 2rem;
+  cursor          : pointer;
+  text-decoration : none;
+  border-radius   : .25rem;
+  transition      : transform .05s;
+  border          : none;
+  text-align      : center;
+
+  &:hover {
+    background      : var(--first-color-alt);
+    text-decoration : inherit;
+  }
+
+  &:active {
+    transform : scale(.99)
+  }
+}
+
+@mixin button-small {
+  padding : .5rem 1rem;
+  font-size: var(--small);
+}
+
+@mixin button-center {
+  display     : table;
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+@mixin button-full {
+  margin-right : 0;
+  margin-left  : 0;
+  width        : 100%;
+}
+
+@mixin button-last {
+  margin-right: 0;
+}
+
+@mixin button-second {
+  background : var(--second-color);
+
+  &:hover {
+    background : var(--second-color-alt);
+  }
+}
+
+@mixin button-alert {
+  background : var(--third-color);
+
+  &:hover {
+    background : var(--third-color-alt);
+  }
+}
+
+@mixin button-cta {
+  background : var(--accent-color);
+
+  &:hover {
+    background : var(--accent-color-alt);
+  }
+}
+
+@mixin button-ghost {
+  color      : var(--first-color);
+  background : none;
+  border     : 1px solid;
+
+  &:hover {
+    background   : var(--first-color);
+    color        : #FFF;
+    border-color : transparent;
+  }
+}
+
+@mixin button-ghost-second {
+  color : var(--second-color) ;
+
+  &:hover {
+    background : var(--second-color);
+    color      : #FFF;
+  }
+}
+
+@mixin button-ghost-alert {
+  color : var(--third-color);
+
+  &:hover {
+    background : var(--third-color);
+    color      : #FFF;
+  }
+}
+
+@mixin button-ghost-cta {
+  color : var(--accent-color);
+
+  &:hover {
+    background : var(--accent-color);
+    color      : #FFF;
+  }
+}

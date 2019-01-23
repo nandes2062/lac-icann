@@ -1,0 +1,55 @@
+version: "3"
+services:
+
+  web:
+    container_name: icanndocker
+    hostname: icanndocker
+    build: ./docker/php-apache              # location for web server dockerfile and config
+    ports:
+      - 20070:80                            # web server will use port 20080 for http
+      - 20473:443                           # web server will use port 20443 for https
+    volumes:
+      - ./html:/var/www/html:cached         # webroot `/var/www/html` will be synced with your local folder `./html`
+    depends_on:
+      - db
+      - mail
+    links:
+      - db
+      - mail
+    environment:
+      REDAXO_USER: admin                    # username of your new REDAXO admin
+      REDAXO_PASSWORD: admin                # password of your new REDAXO admin
+      #REDAXO_DEMO: demo_base                # website demo to be installed. leave empty for a raw REDAXO!
+
+  db:
+    container_name: icanndocker_db
+    hostname: icanndocker_db
+    build: ./docker/mysql                   # location for database dockerfile and config
+    ports:
+      - 23306:3306                          # database will use port 23306
+    volumes:
+      - ./db:/var/lib/mysql:cached          # database in `/var/lib/mysql` will be synced with your local folder `./db`
+    environment:
+      MYSQL_DATABASE: redaxo
+      MYSQL_USER: redaxo
+      MYSQL_PASSWORD: redaxo
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+
+  mail:
+    container_name: icanndocker_mail
+    hostname: icanndocker_mail
+    build: ./docker/mailhog                 # location for mailhog dockerfile and config
+    ports:
+      - 28025:8025                          # mailhog will use port 28025 (for its web interface)
+  phpmyadmin:
+    container_name: icanndocker_phpmyadmin
+    hostname: icanndocker_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 28080:80
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_USER: redaxo
+      PMA_PASSWORD: redaxo

@@ -1,0 +1,22 @@
+code {
+  color   : var(--third-color);
+  display : inline-block;
+  border  : 1px solid var(--border-color);
+  padding : .1em .5em;
+  margin  : 0 .5em;
+  font-family : monospace;
+}
+
+pre code {
+  display : block;
+  border : none;
+}
+
+:not(pre) code {
+  font-family : Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  background : var(--border-rgb-5);
+  font-size: var(--small);
+  padding : 0 .3em;
+  margin-right: .2rem;
+  word-break: break-all;
+}

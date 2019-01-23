@@ -1,0 +1,8 @@
+@function img($img) {
+  @return url(#{$images-path}/#{$img});
+}
+// Elimina las ultimas letras del valor, por defecto elimina 6 letras
+@function split-end($string, $end: 6) {
+  $lenght: str-length(quote($string));
+  @return str-slice($string, 0, $lenght - $end);;
+}

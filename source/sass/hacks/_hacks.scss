@@ -1,0 +1,13 @@
+td [class*="button"] {
+  display: inline;
+
+  &:last-child {
+    margin-right : 0;
+  }
+}
+.made-in{
+  opacity: .28;
+  &:hover{
+    opacity: 1;
+  }
+}

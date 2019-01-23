@@ -1,0 +1,29 @@
+block config
+  include config
+include ../mixins/main-banner
+doctype html
+html(lang="es")
+  head
+    title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="description" content=description)
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Open+Sans:700")
+    link(rel="stylesheet" href= path_media + "css/styles.css?v=" + siteVersion)
+  body(class=currentPage)
+    #rex
+      include ../components/header
+      block topbar
+      block banner
+      .rex-container.main-section.l-section
+        aside.rex-item.l-25.main-sidebar.sidebar-first
+          include ../components/topics-menu
+        main.rex-item.l-75.main-main
+          block main
+      include ../components/go-up
+      include ../components/footer
+    script(src= path_media + "js/modernizr.js")
+    //- script(src= "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY")
+    script(src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyCB69fT0i5alC-TQZ_7GrTxlm3k_hY8Yh8")
+    script(src= path_media + "js/script.js?v=" + siteVersion)
+    //- script(src="js/prism.js?v2")

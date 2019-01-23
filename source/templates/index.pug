@@ -1,0 +1,11 @@
+extends layouts/template
+append config
+  -currentPage = 'Inicio'
+block banner
+  include components/slider
+
+  //- include components/flux-slider.html
+block main
+  p Esta guia define el concepto visual, patrones de diseño y estructura para proyectos web en #{siteName}.
+  p Esta guia se encuentra en constante actualización.
+  a(href= path_page + "stylesguide").button Ver guia de estilos 

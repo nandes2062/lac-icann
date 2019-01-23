@@ -1,0 +1,11 @@
+header.main-header
+  .rex-container.full
+    .rex-item.s-80.l-25.cross-center
+      a(href= path_page + "")
+        img(src= path_media + 'svg/FOR-banner-rgb.svg').main-logo
+    .rex-item.s-20.l-75.cross-center.main-end.header-links
+      nav.main-menu#main-menu
+        ul
+          li(v-for="item in mainmenu")
+            a(:href="'#' + item.href" v-text="item.title")
+      .main-menu-toggle.to-l#main-menu-toggle

@@ -1,0 +1,11 @@
+.google-map{
+  width: 100%;
+  height : calc(100vh - 8rem);
+  .firstHeading{
+    color: var(--text-color);
+    text-shadow: none;
+  }
+  p{
+    color: var(--text-color);
+  }
+}

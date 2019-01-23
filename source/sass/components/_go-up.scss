@@ -1,0 +1,27 @@
+.button--goup{
+  // background: var(--third-color);
+  // color: white;
+  width: 50px;
+  @include from(m){
+    width: 70px;
+  }
+  padding: 0;
+  position: fixed;
+  bottom: 1.2rem;
+  right: 0;
+  z-index: var(--z-fixed);
+  &:hover{
+    // background: var(--first-color);
+    // color: white;
+  }
+  &.fade-in{
+    opacity    : 1;
+    transform  : translateY(0);
+    transition : 0.5s all;
+  }
+  &.fade-out{
+    opacity    : 0;
+    transform: translateY(200%);
+    transition : 0.5s all;
+  }
+}

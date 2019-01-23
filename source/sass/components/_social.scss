@@ -1,0 +1,83 @@
+.social {
+  width: 100%;
+  @include mainCenter;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 0;
+  &__icon{
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+  }
+  .icon-whatsapp, .icon-facebook, .icon-youtube {
+    box-shadow: 0 0 1px 0px $firstColor;
+    padding: .5rem;
+  }
+  li{
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  // .icon-whatsapp:before {
+  //   content: "";
+  //   width: 52px;
+  //   height: 52px;
+  //   background-image: url(../images/whatsapp.png);
+  //   background-size: 52px;
+  // }
+}
+  .icon-whatsapp, .icon-facebook, .icon-youtube {
+    @include crossCenter;
+    @include mainCenter;
+    display: inline-flex;
+    padding: .3rem;
+    background: radial-gradient(rgba(255, 255, 255, 0.67) 0,rgba(255, 255, 255, 0.43) 250%);
+    font-size: 2rem;
+    border-radius: 50px;
+    border: ridge 2px #FFF;
+    transition: all .5s;
+    margin: 0 5px;
+    &:hover{
+      text-shadow: 0px 1px 0px #fff;
+      color: $bodyBg;
+      transform: rotate(1turn);
+    }
+  }
+  .icon-whatsapp {
+    @include crossCenter;
+    @include mainCenter;
+    display: inline-flex;
+    padding: 0;
+    background: radial-gradient(rgba(255, 255, 255, 0.67) 0,rgba(255, 255, 255, 0.43) 250%);
+    font-size: 2rem;
+    border-radius: 50px;
+    transition: all .5s;
+    margin: 0 5px;
+    &:hover{
+      transform: rotate(1turn);
+    }
+  }
+.icon-facebook {
+    background: #4862a3;
+    color: #FFF;
+    opacity: .9;
+    &:hover{
+      opacity: 1;
+    }
+}
+.icon-youtube {
+    background: $thirdColor;
+    color: #FFF;
+    opacity: .9;
+    &:hover{
+      opacity: 1;
+    }
+}
+.icon-whatsapp {
+    opacity: .9;
+    background: #8ae400;
+    &:hover{
+      opacity: 1;
+    }
+}

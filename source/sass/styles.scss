@@ -1,0 +1,63 @@
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+
+// Config
+@import "config/variables";
+@import "config/_functions";
+@import "config/colors";
+
+// Mixins
+@import "config/mixins";
+@import "config/typography";
+@import "config/buttons";
+
+// Libraries
+@import "core/core";
+
+// Base and elements (generic)
+@import "base/base";
+
+// LAYOUT
+  // Escribe solo los estilos de layout (division en regiones del viewport)
+@import "layout/layout";
+
+// MODULOS (SMACSS) O COMPONENTES (ITCSS)
+  // Son los elementos de UI de tu interfaz, como botones, tablas, menus, etc.
+  // Crea los archivos adicionales que necesites (uno por componente)
+@import "components/icons";
+@import "components/buttons";
+@import "components/main-menu";
+@import "components/vertical-menu";
+@import "components/logo";
+@import "components/lists";
+@import "components/code";
+@import "components/helpers";
+@import "components/tables";
+@import "components/forms";
+@import "components/cards";
+@import "components/post";
+@import "components/main-banner";
+@import "tiny-slider/src/tiny-slider"; //node_modules
+@import "components/slider";
+@import "components/flux-slider";
+@import "components/main-header";
+@import "components/main-footer";
+@import "components/go-up";
+@import "components/topbar";
+@import "components/social";
+// @import "components/modal";
+@import "components/tabs";
+// @import "components/payments";
+@import "components/video-class";
+@import "components/google-map";
+
+// Theme (colors and fonts)
+@import "theme/typography";
+@import "theme/colors";
+
+// Utilities (hacks)
+  // Todos los hacks que hayas necesitado para solucionar conflictos
+  // o resolver situaciones extremas. Se espera poder mejorarlos luego.
+@import "hacks/hacks";
+

@@ -1,0 +1,12 @@
+.main-header {
+  height        : var(--header-height);
+  border-bottom : 1px solid var(--border-color);
+  display       : flex;
+  align-items   : center;
+  background    : #FFF;
+  position      : fixed;
+  top           : 0;
+  width         : 100%;
+  left          : 0;
+  z-index       : var(--z-fixed);
+}

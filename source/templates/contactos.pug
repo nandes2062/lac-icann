@@ -1,0 +1,39 @@
+extends layouts/template
+append config
+	-currentPage = 'Contactos'
+//- block banner
+	include components/slider
+	include components/flux-slider.html
+block main
+	.rex-item.l-25
+		h2.title.center Contáctenos
+		form.rex-container.form(v-on:submit.prevent="submitForm")
+			.rex-item.form__item
+				label.form__label(for="") Nombre completo: 
+				input.form__input(v-model="vue.nombre" type="text" required="")
+			.rex-item.form__item
+				label.form__label(for="") Teléfono: 
+				input.form__input(v-model="vue.telefono" type="number")
+			.rex-item.form__item
+				label.form__label(for="") Celular: 
+				input.form__input(v-model="vue.movil" type="number" required="")
+			.rex-item.form__item
+				label.form__label(for="") Dirección: 
+				input.form__input(v-model="vue.direccion" type="text" required="")
+			.rex-item.form__item
+				label.form__label(for="") Ciudad: 
+				input.form__input(v-model="vue.ciudad" type="text" required="")
+			.rex-item.form__item
+				label.form__label(for="") Email: 
+				input.form__input(v-model="vue.email" type="email" required="")
+			.rex-item.form__item
+				label.form__label(for="") Mensaje: 
+				textarea.form__input(v-model="vue.mensaje" name="", cols="30", rows="10" required="")
+			.rex-item.form__item.main-center
+				button.button(type="submit") Enviar
+				button.button(type="submit" v-on:click="clearForm()") Limpiar
+			.statusMessage(v-if="formSubmitted")
+				h4(v-text="vue.envio")
+	.rex-item.l-75
+		h2.title.center Ubíquenos
+		//- google-map

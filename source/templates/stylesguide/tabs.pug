@@ -1,0 +1,13 @@
+extends ../layouts/template-stylesguide
+append config
+  -currentPage = 'top-bar'
+
+block banner
+  block banner
+    +banner("https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb", 'Tabs', '', 'dark')
+
+block main
+  p Use los tabs para mostrar informacion dividida en opciones en poco espacio.
+  include ../components/tabs
+  script.
+    addEventListener('DOMContentLoaded', () => { edTabs() })

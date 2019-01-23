@@ -1,0 +1,14 @@
+.vue-flux{
+  height: 420px;
+  overflow: hidden;
+  z-index: var(--z-normal);
+  .controls div, 
+  div .toggle,
+  ul li span.pagination-item,
+  div.mask, .visible ul{
+    background-color: transparentize($secondColor, .35);
+  }
+  .caption{ 
+    background-color: transparentize($secondColor, .35) !important;
+  }
+}

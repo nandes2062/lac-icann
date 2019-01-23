@@ -1,0 +1,12 @@
+extends ../layouts/template-stylesguide
+append config
+  -currentPage = 'Google Map'
+block banner
+  block banner
+    +banner("https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb", 'Google map', 'Google map - Multimarcador Vue Component', 'accent')
+
+block main
+  h1 Google map dinamico en un componente de VueJS
+  p Para ofrecer la mejor experiencia de usuario al visualizar sus marcadores sus sucurcales ya que es posible agregar varios marcadores en el componente google-map de Vue.
+  p Zoom responsive modificable en el componente.  
+  google-map

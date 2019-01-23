@@ -1,0 +1,31 @@
+/*
+* Button definitions at config/_buttons.scss
+*/
+
+// Basic buttons
+.button,
+[class*="button--"]{
+  @include button;
+  &.center        { @include button-center }
+  &.full          { @include button-full }
+  &.button--small { @include button-small }
+  &.button--last  { @include button-last }
+  &.big           { font-size: var(--title3) }
+}
+// Buttons variations
+.button--second    { @include button-second }
+.button--alert     { @include button-alert }
+.button--cta       { @include button-cta }
+
+// Ghost buttons
+[class*="button--ghost"]  { @include button-ghost }
+.button--ghost--second    { @include button-ghost-second }
+.button--ghost--alert     { @include button-ghost-alert }
+.button--ghost--cta       { @include button-ghost-cta }
+
+// Show buttons in style guide
+.show-buttons {
+  .button, [class*="button--"] {
+    //margin-bottom : 2rem;
+  }
+}

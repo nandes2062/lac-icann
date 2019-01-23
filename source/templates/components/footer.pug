@@ -1,0 +1,51 @@
+footer.main-footer
+	.rex-container
+		.rex-item.l-45.m-100.s-100.main-footer__item.l-block
+			h3.main-footer__title Productos
+			.main-footer__content
+				ul.feature-list.rex-container
+					li.rex-item.l-50(v-for="item in mainmenu")
+						a(v-if="item.submenu == null" :href="item.href" v-text="item.title")
+						a(v-else :href="item.href" v-text="item.title + ': '")
+						template(v-for="subitem in item.submenu")
+							a(:href="subitem.href" v-text="' - ' + subitem.title")
+		.rex-item.l-35.m-60.s-100.main-footer__item.l-block
+			h3.main-footer__title #{siteName} - Bolivia
+			.main-footer__content
+				p
+					b Zona: 
+					| Anotar aca su direccion  Tel.: (+591) 20000000
+					br
+					b Zona: 
+					| Anotar aca su direccion Tel.:(+591) 20000000
+					br
+					b Zona: 
+					| Anotar aca su direccion Tel.:(+591) 20000000
+					span.t3
+					br
+					b Cel:   
+					span
+						i.icon-whatsapp 
+						| (+591) 70000000
+					span
+						a.button--secondary.button--small.center(href="contactos.html") 
+							| Ver mapa
+							i.icon-marker 
+		.rex-item.l-20.m-40.s-100.main-footer__item.l-block
+			h3.main-footer__title Siguenos en:
+			.main-footer__content.main-center.cross-center
+				ul.social
+					li: a.icon-whatsapp(href="https://api.whatsapp.com/send?phone=59171563681" target="_blank")
+					li: a.icon-facebook(href="" target="_blank")
+					li: a.icon-youtube(href="" target="_blank")
+				p.center También puede contactarnos a:
+					br 
+					a(href="javascript:void(0)" target="_blank") example@gmail.com
+	.rex-container
+		.rex-item.l-100.main-footer__item
+			.main-footer__content.main-distribute.cross-center
+				p Todos los Derechos Reservados ® 
+					b #{siteName} 
+					| © 
+					span#currentDate
+				p: a.made-in(href='', target='_blank') Diseño y Programación: Fernando Averanga

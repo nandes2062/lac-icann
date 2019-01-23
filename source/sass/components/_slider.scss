@@ -1,0 +1,58 @@
+.tns-outer{
+  position      : relative; 
+  margin-bottom : 4rem;
+  .main-banner{
+    margin-bottom : 0;
+  }
+}
+[aria-label="Carousel Navigation"], [aria-label="Carousel Pagination"], [data-action]{
+  position : absolute;
+  z-index  : var(--z-normal);
+}
+[data-action]{
+  width      : 30px;
+  height     : 30px;
+  margin-top : 5px;
+  margin-left: 5px;
+  line-height: 2.4;
+  @include from(l){ margin-top: 15px; margin-left: 15px; }
+}
+[aria-label="Carousel Navigation"]{
+  left     : 50%;
+  bottom   : 15px; 
+  transform: translateX(-50%);
+  @include from(l){ bottom: 50px; }
+  
+  [data-controls]{ 
+    width      : 40px;
+    height     : 40px;
+    margin     : 0 5px;
+    line-height: 3.4;
+  }
+}
+[data-action], [aria-label="Carousel Navigation"] [data-controls]{
+  background   : var(--body-bg);
+  color        : var(--second-color);
+  border       : none;
+  border-radius: 50%;
+}
+[aria-label="Carousel Pagination"]{
+  margin-top: 5px;
+  margin-right: 5px;
+  right    : 0;
+  @include from(l){ margin-top: 15px; margin-right: 15px; }
+  button{
+    width        : 15px;
+    height       : 15px;
+    border-radius: 50%;
+    padding      : 0;
+    border       : none;
+    margin       : .3em;
+    background   : #FFF;
+    box-shadow   : inset 0 -3px 0 var(--border-color);
+    &[aria-selected="true"]{
+      background: var(--second-color);
+      box-shadow: none;
+    }
+  }
+}
