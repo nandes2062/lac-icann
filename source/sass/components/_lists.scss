@@ -10,12 +10,12 @@ ul, ol {
 .data-list,
 .feature-list {
   @include clearMenu;
-  margin-bottom : 2em;
+  margin-bottom : 1.5em;
 
   li {
     border-bottom : 1px solid var(--border-color);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     margin : 0;
   }
 }
@@ -70,7 +70,7 @@ ul, ol {
       top : 1.25em; // número mágico !no me juzgues!
       left : 0;
       color: var(--first-color);
-      background : img('icon-check.svg');
+      // background : img('svg/icon-check.svg');
     }
   }
 

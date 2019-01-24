@@ -1,9 +1,11 @@
 .main-footer {
+}
+.main-copyrigth{
+  font-size  : var(--normal);
   background : var(--dark-color);
   color      : #FFF;
-  padding    : 2rem 0;
-  font-size  : var(--normal);
   margin-top : auto;
+  padding-top: 1.5rem;
   a{
     color: #FFF;
   }

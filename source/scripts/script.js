@@ -30,12 +30,7 @@ const rex = new Vue({
     mainmenu,
     formSubmitted: false,
     vue: contactform,
-    fluxOptions: {
-      autoplay: true,
-      delay: 3000,
-      showControls: true,
-      showPagination: true
-    }
+    key: 'Español (spanish)'
   },
   mounted: function () {
     window.edTabs = edTabs
@@ -45,6 +40,9 @@ const rex = new Vue({
     getdate()
   },
   methods: {
+    onChange:function () {
+      console.log(this.key)
+    },
     isFormValid: function () {
       return this.nombre !== ''
     },

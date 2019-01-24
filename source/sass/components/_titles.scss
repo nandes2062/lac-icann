@@ -2,6 +2,10 @@
   color: #FFF;
   background: linear-gradient(var(--first-color), var(--first-dark-3));
 }
+.subtitle, [class*="subtitle--"]{
+  color: var(--second-color);
+  border-bottom: solid 1px var(--accent-color);
+}
 .title--second   {  }
 .title--tertiary {  }
 .title--dark     {  }
