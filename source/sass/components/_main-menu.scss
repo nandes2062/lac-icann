@@ -45,9 +45,12 @@ body {
 
   &.main-menu-visible {
     @include to(l) {
-      right      : 80%;
+      // right      : 80%;
       overflow-y : hidden;
     }
+    // .main-header{
+    //   left: 80%;
+    // }
   }
 }
 
@@ -57,11 +60,11 @@ body {
 
 @mixin main-menu {
   font-size : var(--small);
-
+  text-transform: uppercase;
   @include to(l) {
     position   : fixed;
     top        : var(--header-height);
-    background : var(--first-rgb-9);
+    background : var(--second-color);
     width      : 80%;
     right      : -80%;
     padding    : 1em 1em 2em;
@@ -78,6 +81,7 @@ body {
     @include clearMenu;
     @include from(l) {
       display : flex;
+      text-align: center;
     }
   }
 
@@ -86,16 +90,28 @@ body {
     border-bottom : 1px solid rgba(#fff, .2);
     padding       : 1em 0;
     margin        : 0;
+    transition    : .6s all;
 
     @include from(l) {
       color       : var(--text-color);
       padding     : 0;
-      margin-left : 2rem;
+      // max-width: 147px;
+      // margin-left : 1.5rem;
+      max-width: 185px;
+      margin-left: 0;
+      padding: 0 .5rem;
+    }
+    &:hover{
+      background: #e7e7e7;
     }
   }
 
   a {
     color : inherit;
+    @include crossCenter;
+    @include from(l) {
+      height: 3.9rem;
+    }
   }
 }
 

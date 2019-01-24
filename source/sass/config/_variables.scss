@@ -1,10 +1,10 @@
-// Settings for EDgrid
+// Settings
 $dev        : false;
 $cssCore    : false;
 $cssHelpers : true;
-$container  : rex-container;
-$item       : rex-item;
-$max-width  : 1344px;
+$container  : lac-container;
+$item       : lac-item;
+$max-width  : 68rem;
 $gutter     : 1rem;
 
 // Breakpoints
@@ -27,7 +27,7 @@ $z-modal   : 1000;
 
 :root {
   //layout
-  --header-height : 4rem;
+  --header-height : 6.4rem;
   --max-width     : #{$max-width};
   --gutter        : #{$gutter};
 
@@ -40,4 +40,4 @@ $z-modal   : 1000;
 }
 
 // Images path
-$images-path: 'http://ux.ed.team/img';
+$images-path: '';

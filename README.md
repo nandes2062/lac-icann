@@ -1,4 +1,4 @@
-# REDAXO mit Gulp, Browserify, PostCSS, Pug, EDgrid und Bimmelbam 2
+# Proyecto web ESTRATEGIA LAC - ICANN
 
 ## Installation global requeriments
 - Npm

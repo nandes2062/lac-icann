@@ -1,15 +1,18 @@
 .button--goup{
   // background: var(--third-color);
   // color: white;
-  width: 50px;
+  width: 35px;
   @include from(m){
-    width: 70px;
+    width: 40px;
+  }
+  @include from(l){
+    width: 45px;
   }
   padding: 0;
   position: fixed;
   bottom: 1.2rem;
   right: 0;
-  z-index: var(--z-fixed);
+  z-index: var(--z-tooltip);
   &:hover{
     // background: var(--first-color);
     // color: white;

@@ -1,5 +1,5 @@
 export const optionSlider = {
-  container: '.rex-slider',
+  container: '.lac-slider',
   controlsText: [
     '<i class="icon-left"></i>',
     '<i class="icon-right"></i>'

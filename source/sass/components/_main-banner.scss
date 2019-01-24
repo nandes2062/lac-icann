@@ -1,12 +1,12 @@
 .main-banner {
   background    : var(--first-color);
   color         : #FFF;
-  clip-path     : polygon(0 0, 100% 0, 100% 100%, 0 94%);
+  // clip-path     : polygon(0 0, 100% 0, 100% 100%, 0 94%);
   position      : relative;
 
   // Separación del contenido
   padding       : 2rem 0 3rem;
-  @include from(l) { padding: 8rem 0 10rem }
+  @include from(l) { padding: 7rem 0 9rem }
 
   &.main-banner--secondary { background : var(--second-color)  }
   &.main-banner--tertiary  { background : var(--third-color)  }
@@ -35,6 +35,8 @@
 
   a {
     color: inherit;
+    height: 4rem;
+    display: block;
   }
 
   &-img {

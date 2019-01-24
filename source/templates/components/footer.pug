@@ -1,15 +1,15 @@
 footer.main-footer
-	.rex-container
-		.rex-item.l-45.m-100.s-100.main-footer__item.l-block
+	.lac-container
+		.lac-item.l-45.m-100.s-100.main-footer__item.l-block
 			h3.main-footer__title Productos
 			.main-footer__content
-				ul.feature-list.rex-container
-					li.rex-item.l-50(v-for="item in mainmenu")
+				ul.feature-list.lac-container
+					li.lac-item.l-50(v-for="item in mainmenu")
 						a(v-if="item.submenu == null" :href="item.href" v-text="item.title")
 						a(v-else :href="item.href" v-text="item.title + ': '")
 						template(v-for="subitem in item.submenu")
 							a(:href="subitem.href" v-text="' - ' + subitem.title")
-		.rex-item.l-35.m-60.s-100.main-footer__item.l-block
+		.lac-item.l-35.m-60.s-100.main-footer__item.l-block
 			h3.main-footer__title #{siteName} - Bolivia
 			.main-footer__content
 				p
@@ -31,7 +31,7 @@ footer.main-footer
 						a.button--secondary.button--small.center(href="contactos.html") 
 							| Ver mapa
 							i.icon-marker 
-		.rex-item.l-20.m-40.s-100.main-footer__item.l-block
+		.lac-item.l-20.m-40.s-100.main-footer__item.l-block
 			h3.main-footer__title Siguenos en:
 			.main-footer__content.main-center.cross-center
 				ul.social
@@ -41,8 +41,8 @@ footer.main-footer
 				p.center También puede contactarnos a:
 					br 
 					a(href="javascript:void(0)" target="_blank") example@gmail.com
-	.rex-container
-		.rex-item.l-100.main-footer__item
+	.lac-container
+		.lac-item.l-100.main-footer__item
 			.main-footer__content.main-distribute.cross-center
 				p Todos los Derechos Reservados ® 
 					b #{siteName} 

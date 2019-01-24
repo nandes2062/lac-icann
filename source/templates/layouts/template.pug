@@ -7,7 +7,7 @@ html(lang="es" prefix="og: http://ogp.me/ns#")
     meta(charset="utf-8")
     meta(name="viewport" content="initial-scale=1.0, width=device-width")
     if (currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) == 'Inicio')
-      title= siteName + ' ' + slogan
+      title= siteName + ' - ' + slogan
       meta(property="og:title" content=currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName)
     else
       title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName + ' ' + slogan
@@ -24,8 +24,8 @@ html(lang="es" prefix="og: http://ogp.me/ns#")
       include ../components/header
       block topbar
       block banner
-      .rex-container.main-section.l-section
-        main.rex-item.l-100.main-main
+      .lac-container.main-section.l-section
+        main.lac-item.l-100.main-main
           block main
       include ../components/go-up
       include ../components/footer
