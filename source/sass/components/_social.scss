@@ -7,6 +7,18 @@
   &--link {
     color: #FFF;
     text-decoration: none;
+    &:hover{
+      text-decoration: none;
+      span{
+        color: var(--first-color);
+      } 
+      svg {
+        background-color: var(--first-color);
+        path{
+          fill: #FFF;
+        }
+      }
+    }
   }
   svg{
     display: block;

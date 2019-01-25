@@ -13,6 +13,13 @@
   &--bartop{
     background: var(--second-color);
     height: 2.6rem;
+    a{
+      color: #cccccc;
+      margin-left: 2rem;
+      &:hover{
+        color: var(--first-color);
+      }
+    }
   }
   &--menu{
     height: 4rem;
