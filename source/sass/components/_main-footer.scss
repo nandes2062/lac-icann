@@ -1,12 +1,18 @@
+.pre-footer{
+  background-color: var(--second-color);
+  padding: 1rem 0;
+}
+.pre-footer, footer{
+  font-size: .8rem;
+}
 .main-footer {
+  background-color: $borderColor;
+  border-top: solid 1px silver;
+  box-shadow: 0 0px 2px 0px silver;
+  padding-top: 1rem;
 }
 .main-copyrigth{
-  font-size  : var(--normal);
-  background : var(--dark-color);
-  color      : #FFF;
+  color      : #999;
   margin-top : auto;
-  padding-top: 1.5rem;
-  a{
-    color: #FFF;
-  }
+  padding-top: 1rem;
 }

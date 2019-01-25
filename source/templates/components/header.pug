@@ -3,13 +3,13 @@ header.main-header
     .lac-item.lac-container.to-center
       //- a.button--small(href="http://") ES
   .lac-container.main-header--menu
-    .lac-item.s-80.l-20.cross-center
-      a(href= path_page + "")
-        //- img(src= path_media + 'svg/FOR-banner-rgb.svg')
-        .main-logo
-          b Latin America and the Caribbean
-          b Strategic Plan
-    .lac-item.s-20.l-80.cross-center.main-end.header-links
+    .lac-item.s-80.l-25.cross-center
+      a(href= path_page + "").main-logo
+        img(src= path_media + 'images/icann_logo.png')
+        .lac
+          b.lac-font Latin America and<br>the Caribbean
+          .lac-font Strategic Plan
+    .lac-item.s-20.l-75.cross-center.main-end.header-links
       nav.main-menu#main-menu
         ul
           li(v-for="item in mainmenu")

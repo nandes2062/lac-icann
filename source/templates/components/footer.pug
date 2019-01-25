@@ -1,15 +1,38 @@
+.pre-footer
+	.lac-container
+		.lac-item.main-footer__item
+			ul.social
+				li.social--item.center
+					a.social--link(href="http://")
+						include ../svg/facebook-f.svg
+						| Facebook
+				li.social--item.center
+					a.social--link(href="http://")
+						include ../svg/youtube-f.svg
+						| Youtube
+				li.social--item.center
+					a.social--link(href="http://")
+						include ../svg/linkedin-f.svg
+						| Linkedin
+				li.social--item.center
+					a.social--link(href="http://")
+						include ../svg/twitter-f.svg
+						| Twitter
+				//- li.social--item.center
+				//- 	a.social--link(href="http://")
+				//- 		include ../svg/facebook-f.svg
+				//- 		| Facebook
 footer.main-footer
 	.lac-container
 		.lac-item.l-60.m-100.s-100.main-footer__item
 			.main-footer__content
-				h1.main-footer__title.t3 Estrategia LAC
 				ul.data-list.lac-container
-					li.lac-item.l-50
+					li.lac-item.m-50
 						a(href= path_page)
-							b Inicio
-					li.lac-item.l-50(v-for="item in mainmenu")
+							span.w4 Inicio
+					li.lac-item.m-50(v-for="item in mainmenu")
 						a(v-if="item.submenu == null" :href="item.href")
-							b(v-text="item.title")
+							span.w4(v-text="item.title")
 						a(v-else :href="item.href" v-text="item.title + ': '")
 						template(v-for="subitem in item.submenu")
 							a(:href="subitem.href" v-text="' - ' + subitem.title")
@@ -18,7 +41,7 @@ footer.main-footer
 			form.main-footer__content.lac-item.l-50.m-50.s-90
 				.form__item
 					label Seleccionar idioma
-					select(@change="onChange()" v-model="key")
+					select(@change="onChange()" v-model="lang")
 						option Español (spanish)
 						option English (Inglés)
 footer.main-copyrigth

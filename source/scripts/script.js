@@ -30,7 +30,7 @@ const rex = new Vue({
     mainmenu,
     formSubmitted: false,
     vue: contactform,
-    key: 'Español (spanish)'
+    lang: 'Español (spanish)'
   },
   mounted: function () {
     window.edTabs = edTabs
@@ -41,7 +41,7 @@ const rex = new Vue({
   },
   methods: {
     onChange:function () {
-      console.log(this.key)
+      console.log(this.lang)
     },
     isFormValid: function () {
       return this.nombre !== ''

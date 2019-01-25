@@ -6,6 +6,51 @@ block banner
 
   //- include components/flux-slider.html
 block main
-  p Esta guia define el concepto visual, patrones de diseño y estructura para proyectos web en #{siteName}.
-  p Esta guia se encuentra en constante actualización.
-  a(href= path_page + "stylesguide").button Ver guia de estilos 
+  .lac-container.l-block
+    .lac-item.l-30.l-block
+      h2.lac-font= `Lorem ipsum dolor sit amet consectetur adipisicing elit.`.toUpperCase()
+    .lac-item.l-70.l-block
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores id iste excepturi! Culpa officiis voluptatibus rerum possimus odio eos expedita praesentium quidem repellendus? Ex dolorem veniam culpa quos, ipsam inventore.
+  .lac-container.main-center
+    .lac-item.m-1-3.s-50.l-block
+      .card
+        .card__img
+          img(src='http://lorempixel.com/400/200/business/1')
+        .card__content
+          .card__title Título de la tarjeta
+          .card__subtitle
+            p Subtitulo de la tarjeta
+          .card__body
+            p
+              | Este el contenido de la tarjeta en caso lo requiera. Algunas tarjetas no requieren contenido pero otras sí.
+          footer.card__footer.to-center
+            .card__button
+              a.button--ghost--tertiary.button--small(href='#') Ver más
+    .lac-item.m-1-3.s-50.l-block
+      .card
+        .card__img
+          img(src='http://lorempixel.com/400/200/business/2')
+        .card__content
+          .card__title Título de la tarjeta
+          .card__subtitle
+            p Subtitulo de la tarjeta
+          .card__body
+            p
+              | Este el contenido de la tarjeta en caso lo requiera. Algunas tarjetas no requieren contenido pero otras sí.
+          footer.card__footer.to-center
+            .card__button
+              a.button--ghost--tertiary.button--small(href='#') Ver más
+    .lac-item.m-1-3.s-50.l-block
+      .card
+        .card__img
+          img(src='http://lorempixel.com/400/200/business/4')
+        .card__content
+          .card__title Título de la tarjeta
+          .card__subtitle
+            p Subtitulo de la tarjeta
+          .card__body
+            p
+              | Este el contenido de la tarjeta en caso lo requiera. Algunas tarjetas no requieren contenido pero otras sí.
+          footer.card__footer.to-center
+            .card__button
+              a.button--ghost--tertiary.button--small(href='#') Ver más
