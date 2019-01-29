@@ -12,7 +12,8 @@
   z-index       : var(--z-fixed);
   &--bartop{
     background: var(--second-color);
-    height: 2.6rem;
+    height: 2.76rem;
+    font-size: var(--small);
     a{
       color: #cccccc;
       margin-left: 2rem;
@@ -22,6 +23,6 @@
     }
   }
   &--menu{
-    height: 4rem;
+    height: rem(76.39px);
   }
 }

@@ -6,8 +6,8 @@ header.main-header
         a(href="#") Español
       //- a.button--small(href="http://") ES
   .lac-container.main-header--menu
-    .lac-item.s-80.l-25.cross-center
-      a(href= path_page + "").main-logo
+    .lac-item.s-80.l-25.cross-center.lac-item--logo
+      a(href= path_page + "").main-logo.cross-center
         img(src= path_media + 'images/icann_logo.png')
         .lac
           b.lac-font Latin America and<br>the Caribbean
@@ -15,6 +15,6 @@ header.main-header
     .lac-item.s-20.l-75.cross-center.main-end.header-links
       nav.main-menu#main-menu
         ul
-          li(v-for="item in mainmenu")
-            a(:href="'#' + item.href" v-text="item.title")
+          li(v-for="(item, index) in mainmenu")
+            a(:class="(index === 4) ? 'resalt' : ''" :href="'#' + item.href" v-text="item.title")
       .main-menu-toggle.to-l#main-menu-toggle

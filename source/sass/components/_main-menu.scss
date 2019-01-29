@@ -27,7 +27,6 @@
   .active {
 
     @include from(l) {
-      font-weight : 400;
       color: var(--third-color);
 
       &::before {
@@ -59,7 +58,9 @@ body {
 }
 
 @mixin main-menu {
-  font-size : var(--small);
+  font-family: $heading-font;
+  font-size : var(--smaller);
+  line-height: 1.2;
   text-transform: uppercase;
   @include to(l) {
     position   : fixed;
@@ -93,7 +94,7 @@ body {
     transition    : .6s all;
 
     @include from(l) {
-      color       : var(--text-color);
+      color       : #333333;
       padding     : 0;
       // max-width: 147px;
       // margin-left : 1.5rem;
@@ -101,16 +102,24 @@ body {
       margin-left: 0;
       padding: 0 .5rem;
     }
-    &:hover{
-      background: #e7e7e7;
+    @include from(l){
+      &:hover{
+        background: #f0f0f0;
+      }
     }
   }
-
+  
   a {
     color : inherit;
     @include crossCenter;
     @include from(l) {
-      height: 3.9rem;
+      height: 4.7rem;
+    }
+  }
+  a.resalt{
+    color: var(--first-color);
+    @include from(l){
+      color: var(--first-dark-3);      
     }
   }
 }

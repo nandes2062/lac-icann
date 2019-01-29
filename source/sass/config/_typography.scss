@@ -6,10 +6,76 @@
 @function rem($px) {
   @return ($px / 16px) * 1rem;
 }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Lato-Light-b3fd736899b764a001a32bc08e21e32a8d252ae4476701f4d950838a7d5aedfa.eot");
+  src: url("../fonts/Lato-Light-b3fd736899b764a001a32bc08e21e32a8d252ae4476701f4d950838a7d5aedfa.eot?#iefix") format("embedded-opentype"), local("Lato Light"), local("Lato-Light"), url("../fonts/Lato-Light-79ff081f0767069ad58f2f5aed73102bcc5b15261aa88b5a92777eed19c28cf8.woff") format("woff"), url("../fonts/Lato-Light-4e24b84a8bdd1723c9904a3f75873227834070cf8e1e226d09a1bdfd23ae6c7f.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato-Regular-5a94c1012a7ee34af2ec19ff7e48e9d8e6799b222cf70377c0d8343234c6073b.eot");
+  src: url("../fonts/Lato-Regular-5a94c1012a7ee34af2ec19ff7e48e9d8e6799b222cf70377c0d8343234c6073b.eot?#iefix") format("embedded-opentype"), local("Lato Regular"), local("Lato-Regular"), url("../fonts/Lato-Regular-c52ee73328acb33dabc00b354dd13f59d0a8d13cb09f357c843529f5aac8f8ca.woff") format("woff"), url("../fonts/Lato-Regular-ddf7e7d418391493df53535e54fd2155ade25fe30def7f35f8fef72270118d63.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Lato-Bold-033c01a7710ab891234423cd6753d131592f1f30463c4f9d27e9d83f0d252ba1.eot");
+  src: url("../fonts/Lato-Bold-033c01a7710ab891234423cd6753d131592f1f30463c4f9d27e9d83f0d252ba1.eot?#iefix") format("embedded-opentype"), local("Lato Bold"), local("Lato-Bold"), url("../fonts/Lato-Bold-2d7296d56283a58f6d52bba4bd18d38ea6edaf87faae445bc510d6f7117aae62.woff") format("woff"), url("../fonts/Lato-Bold-dcb20bc022a3ce383d25ec2af743f0cc713ec29c75f033bae95b4c8d1347b070.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Lato-Italic-5ca2b4a48d47453209728ca5ce663e9a1f588886a3c4dd704f91ecc23259b871.eot");
+  src: url("../fonts/Lato-Italic-5ca2b4a48d47453209728ca5ce663e9a1f588886a3c4dd704f91ecc23259b871.eot?#iefix") format("embedded-opentype"), local("Lato Italic"), local("Lato-Italic"), url("../fonts/Lato-Italic-bd137589c64f4f7a64c10ee6901608c6fc4fcc8df93a6883aa9f049e5d5f925b.woff") format("woff"), url("../fonts/Lato-Italic-f7d374b32c7bf0935d617b7884b9b4c419733f88eb75ede1fbececdf0c47835a.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Oswald Light"), local("Oswald-Light"), url("../fonts/Oswald-Light-b3f449344e448c225a1ee80149ce637832966121f4c8ed23ac3a07230f600158.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswald Regular"), local("Oswald-Regular"), url("../fonts/Oswald-Regular-3286ed7d7957dca09965f62de2ddbd832dcc62777290a2511f38b3d6a1638377.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oswald Bold"), local("Oswald-Bold"), url("../fonts/Oswald-Bold-96ae19402c7780117c4d44cace1489caf41765eded65e0b38ff972ed449a1416.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'SourceSans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("SourceSans Light"), local("SourceSans-Light"), url("../fonts/SourceSans-Light-3703c43c798f137e5e38f8dc60cafb761cc792f85fcbbc60148eae0cd165a5e8.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'SourceSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("SourceSans Regular"), local("SourceSans-Regular"), url("../fonts/SourceSans-Regular-0ab72d9ee658b0ee28c414ecf5a304421a14f1bdb585ab17c034c037cd215ab7.woff") format("woff")
+}
 
 // Font families
-$body-font   : Lato, 'sans-serif'; // only 400 and 400i
-$heading-font : 'Open Sans', 'sans-serif'; // only 700
+$body-font   : helvetica, arial, sans-serif; // only 400 and 400i
+$heading-font : 'Lato', Helvetica, Arial, sans-serif; // only 700
 $lac-font   : 'Poppins', sans-serif;; // only 400 and 400i
 
 // Font sizes
@@ -18,8 +84,8 @@ $fontSizes: (
   title2  : rem(24px),
   title3  : rem(20px),
   normal  : rem(16px),
-  small   : rem(14px),
-  smaller : rem(12px)
+  small   : rem(14.4px),
+  smaller : rem(13.6px)
 );
 
 // Get font size from map
