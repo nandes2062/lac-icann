@@ -1,6 +1,5 @@
 .tns-outer{
-  position      : relative; 
-  margin-bottom : 4rem;
+  position      : relative;
   .main-banner{
     margin-bottom : 0;
   }
@@ -21,7 +20,8 @@
   left     : 50%;
   bottom   : 15px; 
   transform: translateX(-50%);
-  @include from(l){ bottom: 50px; }
+  display: none;
+  @include from(l){ bottom: 50px; display: block;}
   
   [data-controls]{ 
     width      : 40px;
@@ -40,7 +40,8 @@
   margin-top: 5px;
   margin-right: 5px;
   right    : 0;
-  @include from(l){ margin-top: 15px; margin-right: 15px; }
+  display: none;
+  @include from(l){ display:block;margin-top: 15px; margin-right: 15px; }
   button{
     width        : 15px;
     height       : 15px;

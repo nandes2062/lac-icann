@@ -35,7 +35,9 @@
   font-style: italic;
   font-weight: 400;
   src: url("../fonts/Lato-Italic-5ca2b4a48d47453209728ca5ce663e9a1f588886a3c4dd704f91ecc23259b871.eot");
-  src: url("../fonts/Lato-Italic-5ca2b4a48d47453209728ca5ce663e9a1f588886a3c4dd704f91ecc23259b871.eot?#iefix") format("embedded-opentype"), local("Lato Italic"), local("Lato-Italic"), url("../fonts/Lato-Italic-bd137589c64f4f7a64c10ee6901608c6fc4fcc8df93a6883aa9f049e5d5f925b.woff") format("woff"), url("../fonts/Lato-Italic-f7d374b32c7bf0935d617b7884b9b4c419733f88eb75ede1fbececdf0c47835a.ttf") format("truetype")
+  src: url("../fonts/Lato-Italic-5ca2b4a48d47453209728ca5ce663e9a1f588886a3c4dd704f91ecc23259b871.eot?#iefix") format("embedded-opentype"), local("Lato Italic"), local("Lato-Italic"),
+       url("../fonts/Lato-Italic-bd137589c64f4f7a64c10ee6901608c6fc4fcc8df93a6883aa9f049e5d5f925b.woff") format("woff"), 
+       url("../fonts/Lato-Italic-f7d374b32c7bf0935d617b7884b9b4c419733f88eb75ede1fbececdf0c47835a.ttf") format("truetype")
 }
 
 @font-face {
@@ -73,10 +75,25 @@
   src: local("SourceSans Regular"), local("SourceSans-Regular"), url("../fonts/SourceSans-Regular-0ab72d9ee658b0ee28c414ecf5a304421a14f1bdb585ab17c034c037cd215ab7.woff") format("woff")
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Poppins-Regular.woff") format("woff"), 
+       url("../fonts/Poppins-Regular.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Poppins-Bold.woff") format("woff"), 
+       url("../fonts/Poppins-Bold.ttf") format("truetype")
+}
+
 // Font families
 $body-font   : helvetica, arial, sans-serif; // only 400 and 400i
 $heading-font : 'Lato', Helvetica, Arial, sans-serif; // only 700
-$lac-font   : 'Poppins', sans-serif;; // only 400 and 400i
+$lac-font   : 'Poppins', Helvetica, Arial, sans-serif;; // only 400 and 400i
 
 // Font sizes
 $fontSizes: (

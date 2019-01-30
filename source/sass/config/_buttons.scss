@@ -1,13 +1,13 @@
 // This file doesn't generate any css
 @mixin button {
   display         : inline-block;
-  padding         : 1em 2em;
+  padding         : .7em 1.5em;
   background      : var(--first-color);
   color           : #FFF;
   margin-right    : 2rem;
   cursor          : pointer;
   text-decoration : none;
-  border-radius   : .25rem;
+  border-radius   : .1rem;
   transition      : transform .05s;
   border          : none;
   text-align      : center;
@@ -24,7 +24,7 @@
 
 @mixin button-small {
   padding : .5rem 1rem;
-  font-size: var(--small);
+  font-size: var(--normal);
 }
 
 @mixin button-center {
