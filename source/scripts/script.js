@@ -16,10 +16,10 @@ import { contactform } from './data/contact-form'
 import Vue from 'vue/dist/vue.min'
 // import Vue from 'vue/dist/vue'
 import axios from 'axios/dist/axios.min'
-import { googleMap } from './components/googlemaps'
+// import { googleMap } from './components/googlemaps'
 
 // Vue Components
-Vue.component('google-map', googleMap)
+// Vue.component('google-map', googleMap)
 
 const rex = new Vue({
   el: '#rex',
@@ -41,7 +41,12 @@ const rex = new Vue({
   },
   methods: {
     onChange:function () {
-      console.log(this.lang)
+      if(this.lang == 'Español'){
+        console.log(1)
+      }
+      else if(this.lang == 'English'){
+        console.log(2)
+      }
     },
     isFormValid: function () {
       return this.nombre !== ''
