@@ -1,7 +1,18 @@
-.center {
-  text-align : center;
+// Alineamiento de texto
+.center, .text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
 }
 
 .strong {
   font-weight : 700;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
