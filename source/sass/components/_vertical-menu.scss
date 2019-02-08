@@ -21,7 +21,9 @@
 
 .vertical-menu {
   border-right : 1px solid var(--border-color);
-
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   @include to(l) {
     max-height : 0;
     transition: max-height .5s;
@@ -42,28 +44,38 @@
   }
 
   li {
-    padding : .4em 0;
+    padding : .1em 0;
     border-bottom : none;
     font-size : var(--small);
     color: var(--text-color);
+    margin-bottom: 0;
   }
 
   a {
     color: inherit;
     display : block;
-
+    margin-right: -1px;
+    padding: .5em 0;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    text-decoration : none;
+    &:hover{
+      border-right: 3px solid var(--first-color);
+      border-bottom: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
+    }
     &.active {
       display : flex;
       justify-content: space-between;
       align-items: center;
-      color: var(--third-color);
+      color: var(--first-dark-3);
 
       &::after {
         content: '';
         display : block;
         width : 1rem;
         height : 1rem;
-        background : img('icon-right.svg') center right / contain no-repeat;
+        // background : img('svg/icon-right.svg') center right / contain no-repeat;
       }
 
       &:hover {
@@ -77,10 +89,11 @@
     border-top: 1px solid var(--border-color);
     margin-right: -1px;
     padding: .5em 0;
-    border-right: 1px solid $bodyBg;
+    border-right: 3px solid var(--first-color);
+    font-size: .9rem;
 
     &::after {
-      background : img('icon-right.svg') 100% / contain no-repeat !important;
+      // background : img('svg/icon-right.svg') 100% / contain no-repeat !important;
       margin-right : 1rem;
     }
   }

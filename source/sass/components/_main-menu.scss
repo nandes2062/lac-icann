@@ -27,8 +27,8 @@
   .active {
 
     @include from(l) {
-      color: var(--third-color);
-
+      color: var(--first-dark-3);
+      font-weight: 700;
       &::before {
         display : none;
       }

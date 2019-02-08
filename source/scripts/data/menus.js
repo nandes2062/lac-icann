@@ -29,10 +29,6 @@ export const mainmenu = [
       href: 'areas-de-interes-y-objetivos'
     },
     {
-      title: 'Áreas de interés y objetivos',
-      href: 'areas-de-interes-y-objetivos'
-    },
-    {
       title: 'Proyectos',
       href: 'proyectos',
       subpages: []

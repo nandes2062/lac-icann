@@ -14,13 +14,21 @@ h1, h2, h3, h4, h5, h6 {
     margin-top : -.5rem;
     margin-bottom : 1rem;
   }
+  & + hr {
+    position: relative;
+    top: -.75rem;
+    margin: 0;
+  }
 }
 
 li {
   margin-top : 0;
   margin-bottom : .75rem;
 }
-
+.m-block{
+  margin-top : 0;
+  margin-bottom : .5rem;
+}
 // Bloques de contenido
 .l-block,
 section,
@@ -54,4 +62,15 @@ ol {
 
 .topbar {
   margin-bottom : 2rem;
+}
+
+// Alineamiento de texto
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
 }

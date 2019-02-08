@@ -22,7 +22,7 @@ docker-compose up -d
 gulp
 ```
 
-## Backups of add-ons, database and assets
+## Backups of add-ons, database and media
 - Go to admin [localhost:3000/redaxo](http://localhost:3000/redaxo)
 
 >User: admin <br>

@@ -12,6 +12,7 @@ $accentColorAlt : #F1A000;
 $darkColor   : #282D31;
 $borderColor : #e7e7e7;
 $textColor   : #53575A;
+$textColorAlt: #666666;
 $bodyBg      : #fcfdfd;
 
 // Mixin lighten & darken generate's CSS variables
@@ -68,6 +69,7 @@ $primaryColors: (
   --dark-color       : #{$darkColor};
   --border-color     : #{$borderColor};
   --text-color       : #{$textColor};
+  --text-color-alt   : #{$textColorAlt};
   --body-bg          : #{$bodyBg};
 
   // RGBA colors

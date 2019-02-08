@@ -9,7 +9,15 @@
   background-color: $borderColor;
   border-top: solid 1px silver;
   box-shadow: 0 0px 2px 0px silver;
-  padding-top: 1rem;
+  padding-top: rem(40px);
+  padding-bottom: rem(10px);
+  h2{
+    color: #333;
+    margin-bottom: .7rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 400;
+  }
 }
 .main-copyrigth{
   color      : #999;

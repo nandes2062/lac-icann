@@ -24,6 +24,10 @@ ul, ol {
     display : flex;
     justify-content: space-between;
     align-items: center;
+    a{
+      line-height: 1rem;
+      color: var(--text-color-alt);
+    }
 
     > :first-child {
       margin-bottom : .5rem;
