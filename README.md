@@ -34,6 +34,7 @@ Always check if a new add-on was added)
 > - yform
 > - yrewrite
 > - redactor2
+> - uploader
 - Copy backups of database and media (You may have to copy in root mode)
 ```
 cp backups/lacdb.sql html/redaxo/data/addons/backup
