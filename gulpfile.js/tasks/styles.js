@@ -22,7 +22,7 @@ const task = (done) => {
 
     // define PostCSS plugins
     let postcssPlugins = [
-        customProperties(),
+        postCSSCustomProperties(),
         autoprefixer(), // autoprefixer uses config from .browserslistrc
     ];
     if (process.env.APP_ENV === 'production') {

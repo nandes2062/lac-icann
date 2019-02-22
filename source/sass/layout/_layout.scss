@@ -4,7 +4,9 @@ body {
   flex-direction : column;
   min-height     : calc(100vh - var(--header-height ));
 }
-
+hr{
+  border: solid 1px var(--border-color);
+}
 // Vertical rhythm
 h1, h2, h3, h4, h5, h6 {
   margin-top : 0;
@@ -28,6 +30,10 @@ li {
 .m-block{
   margin-top : 0;
   margin-bottom : .5rem;
+}
+.xl-block{
+  margin-top : 0;
+  margin-bottom : 2rem;
 }
 // Bloques de contenido
 .l-block,

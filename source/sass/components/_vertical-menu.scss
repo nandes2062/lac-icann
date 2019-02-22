@@ -1,7 +1,7 @@
 .vertical-menu-toggle {
   background-size : 100% 34%;
   color: var(--first-color);
-  font-size : var(--small);
+  font-size : var(--normal);
   @include to(l) {
     display : flex;
   }
@@ -10,6 +10,7 @@
     display : block;
     width : .5em;
     height : 1.2em;
+    
     background-image: radial-gradient(circle, var(--text-color) 2px, transparent 2px);
     background-size : 100% 34%;
     margin-right : .2em;
@@ -39,14 +40,14 @@
     }
   }
 
-  ul {
+  >ul {
     @include clearMenu;
   }
-
+  
   li {
-    padding : .1em 0;
+    padding : 0;
     border-bottom : none;
-    font-size : var(--small);
+    font-size : var(--normal);
     color: var(--text-color);
     margin-bottom: 0;
   }
@@ -55,11 +56,13 @@
     color: inherit;
     display : block;
     margin-right: -1px;
-    padding: .5em 0;
+    padding: .5em .5rem;
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
     text-decoration : none;
+    border-right: 3px solid transparent;
     &:hover{
+      background: var(--border-color);
       border-right: 3px solid var(--first-color);
       border-bottom: 1px solid var(--border-color);
       border-top: 1px solid var(--border-color);
@@ -88,13 +91,85 @@
     border-bottom: 1px solid var(--border-color);
     border-top: 1px solid var(--border-color);
     margin-right: -1px;
-    padding: .5em 0;
     border-right: 3px solid var(--first-color);
-    font-size: .9rem;
+    font-size: var(--normal);
 
     &::after {
       // background : img('svg/icon-right.svg') 100% / contain no-repeat !important;
       margin-right : 1rem;
     }
+  }
+}
+
+.acc-menu > li{
+  padding-left:1.5em;
+  border-bottom: 1px solid var(--border-color);
+  ul{
+    margin-bottom: 0;
+    transition: all .4s;
+  }
+}
+.acc-menu li a{
+  display:block;
+  text-decoration:none;
+}
+.acc-menu li a:hover{ 
+}
+.acc-menu > li > a{
+    color:white;
+}
+.acc-menu input[type="checkbox"] ~ ul,
+.acc-menu input[type="checkbox"].current:checked ~ ul{
+  visibility: hidden;
+  max-height: 0;
+  li{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height .5s;
+  }
+}
+.acc-menu input[type="checkbox"]:checked ~ ul,
+.acc-menu input[type="checkbox"].current ~ ul{
+  visibility: visible;
+  margin-bottom: 0;
+  max-height: 100%;
+  li{
+    max-height: 100px;
+    height:auto;
+  }
+}
+.acc-menu input[type="checkbox"]{
+  display:none;
+}
+.acc-menu label{
+  display: flex;
+  align-items: center;
+  margin-left:-1.5em;
+  padding: .25rem 0;
+  cursor:pointer;
+}
+.acc-menu  label:hover{
+  background: var(--border-color);
+}
+.acc-menu  label:before,
+/*This flip-reverses the label */
+.acc-menu input[type="checkbox"]:checked.current ~ label:before{
+  content:"\f0da";
+  font-family: FontAwesome;
+  @include mainCenter;
+  @include crossCenter;
+}
+.acc-menu input[type="checkbox"] ~ label:before{
+  transition: .5s transform;
+  width: 2rem;
+  height: 2.5rem;
+}
+.acc-menu input[type="checkbox"]:checked ~ label:before,
+.acc-menu input[type="checkbox"].current  ~ label:before{
+  transform: rotate(90deg);
+}
+.acc-menu input[type="checkbox"].current:checked{
+  & ~ label:before{
+    transform: rotate(0);
   }
 }
