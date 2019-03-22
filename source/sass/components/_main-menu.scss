@@ -27,7 +27,7 @@
   .active {
 
     @include from(l) {
-      color: var(--first-dark-3);
+      color: #{'hsl(var(--first-HS), 41%)'};
       font-weight: 700;
       &::before {
         display : none;
@@ -119,7 +119,7 @@ body {
   a.resalt{
     color: var(--first-color);
     @include from(l){
-      color: var(--first-dark-3);      
+      color: #{'hsl(var(--first-HS), 41%)'};
     }
   }
 }

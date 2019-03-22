@@ -27,7 +27,7 @@
 .main-banner__data {
   position: relative;
   height: 408px;
-  background: var(--first-rgb-9);
+  background: rgba(var(--first-RGB), 0.9);
   left: 50%;
   transform: translateX(-50%);
   @include from(l){

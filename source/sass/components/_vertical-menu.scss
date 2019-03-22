@@ -71,7 +71,7 @@
       display : flex;
       justify-content: space-between;
       align-items: center;
-      color: var(--first-dark-3);
+      color: #{'hsl(var(--first-HS), 41%)'};
 
       &::after {
         content: '';
@@ -171,5 +171,18 @@
 .acc-menu input[type="checkbox"].current:checked{
   & ~ label:before{
     transform: rotate(0);
+  }
+}
+.acc-menu li.acc-item{
+  display: flex;
+  flex-wrap: wrap;
+  &> label{
+    flex: 1;
+  }
+  &> a{
+    flex: 6;
+  }
+  a{
+    color: var(--second-color);
   }
 }

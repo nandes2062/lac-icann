@@ -90,7 +90,7 @@
   .card__content {
     position : absolute;
     bottom : 0;
-    background : var(--dark-rgb-7);
+    background : rgba(var(--dark-RGB), 0.7);
     width : 100%;
   }
 

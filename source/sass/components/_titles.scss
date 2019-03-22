@@ -1,6 +1,6 @@
 .title, [class*="title--"]{
   color: #FFF;
-  background: linear-gradient(var(--first-color), var(--first-dark-3));
+  background: linear-gradient(var(--first-color), #{'hsl(var(--first-HS), 41%)'});
 }
 .subtitle, [class*="subtitle--"]{
   color: var(--second-color);

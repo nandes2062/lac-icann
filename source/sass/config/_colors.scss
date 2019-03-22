@@ -1,85 +1,41 @@
-// Colors
-$firstColor     : #41acdb;
-$firstColorAlt  : #9ccaed;
-$secondColor    : #002b49;
-$secondColorAlt : #424e68;
-$thirdColor     : #FF3C32;
-$thirdColorAlt  : #FF2419;
-$accentColor    : #FBA905;
-$accentColorAlt : #F1A000;
-
-// Complementary colors
-$darkColor   : #282D31;
-$borderColor : #e7e7e7;
-$textColor   : #333333;
-$textColorAlt: #666666;
-$bodyBg      : #fcfdfd;
-
-// Mixin lighten & darken generate's CSS variables
-@mixin colors($property, $value, $lighten: 0, $darken: 0) {
-  // Lightens
-  @if ($lighten != 0) {
-    $light: $value;
-    @for $i from 1 through $lighten {
-      @if $light != white {
-        $light: lighten($value, percentage($i*0.05));
-        #{$property}-light-#{$i}: #{$light};
-      }
-    }
-  }
-  #{$property}-color: #{$value};
-  // Darkens
-  @if ($darken != 0) {
-    $dark: $value;
-    @for $i from 1 through $darken {
-      @if $dark != black {
-        $dark: darken($value, percentage($i*0.05));
-        #{$property}-dark-#{$i}: #{$dark};
-      }
-    }
-  }
-}
-
-// Mixin rbga generate CSS variable
-@mixin rgba($property, $val, $alpha: 0) {
-  #{$property}-rgb-#{$alpha*10}: #{rgba($val, $alpha)};
-}
-
-// map for colors
-$primaryColors: (
-  --first: $firstColor,
-  --second: $secondColor,
-  --third: $thirdColor,
-  --accent: $accentColor,
-  --dark: $darkColor,
-);
-
-:root{
-  // Colors
-  @include colors    (--first, $firstColor, 15,15);
-  --first-color-alt  : #{$firstColorAlt};
-  @include colors    (--second,$secondColor,3,2);
-  --second-color-alt : #{$secondColorAlt};
-  @include colors    (--third, $thirdColor, 3,2);
-  --third-color-alt  : #{$thirdColorAlt};
-  @include colors    (--accent,$accentColor,3,2);
-  --accent-color-alt : #{$accentColorAlt};
-  
-  // Complementary colors
-  --dark-color       : #{$darkColor};
-  --border-color     : #{$borderColor};
-  --text-color       : #{$textColor};
-  --text-color-alt   : #{$textColorAlt};
-  --body-bg          : #{$bodyBg};
-
-  // RGBA colors
-  @include rgba(--border, $borderColor, .2);
-  @include rgba(--border, $borderColor, .5);
-  @each $key, $value in $primaryColors {
-    // RBGA para tablas, example: --first-rgb-1:
-    @include rgba($key, $value, .1);
-    @include rgba($key, $value, .3);
-    @include rgba($key, $value, .7);
-    @include rgba($key, $value, .9);
-  }
+:root {
+  --first-color: #41acdb;
+  --first-HS: 198, 68%;
+  --first-RGB: 65, 172, 219;
+  --first-alt-color: #9ccaed;
+  --first-alt-HS: 206, 69%;
+  --first-alt-RGB: 156, 202, 237;
+  --second-color: #002b49;
+  --second-HS: 205, 100%;
+  --second-RGB: 0, 43, 73;
+  --second-alt-color: #424e68;
+  --second-alt-HS: 221, 22%;
+  --second-alt-RGB: 66, 78, 104;
+  --third-color: #FF3C32;
+  --third-HS: 3, 100%;
+  --third-RGB: 255, 60, 50;
+  --third-alt-color: #FF2419;
+  --third-alt-HS: 3, 100%;
+  --third-alt-RGB: 255, 36, 25;
+  --accent-color: #FBA905;
+  --accent-HS: 40, 97%;
+  --accent-RGB: 251, 169, 5;
+  --accent-alt-color: #F1A000;
+  --accent-alt-HS: 40, 100%;
+  --accent-alt-RGB: 241, 160, 0;
+  --dark-color: #282D31;
+  --dark-HS: 207, 10%;
+  --dark-RGB: 40, 45, 49;
+  --border-color: #e7e7e7;
+  --border-HS: 0, 0%;
+  --border-RGB: 231, 231, 231;
+  --text-color: #333333;
+  --text-HS: 0, 0%;
+  --text-RGB: 51, 51, 51;
+  --text-alt-color: #666666;
+  --text-alt-HS: 0, 0%;
+  --text-alt-RGB: 102, 102, 102;
+  --body-bg-color: #fcfdfd;
+  --body-bg-HS: 180, 20%;
+  --body-bg-RGB: 252, 253, 253;
 }

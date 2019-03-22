@@ -6,7 +6,7 @@
   font-size: .8rem;
 }
 .main-footer {
-  background-color: $borderColor;
+  background-color: var(--border-color);
   border-top: solid 1px silver;
   box-shadow: 0 0px 2px 0px silver;
   padding-top: rem(40px);

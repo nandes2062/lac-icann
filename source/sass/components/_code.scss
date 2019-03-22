@@ -14,7 +14,7 @@ pre code {
 
 :not(pre) code {
   font-family : Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  background : var(--border-rgb-5);
+  background : rgba(var(--border-RGB), 0.5);
   font-size: var(--small);
   padding : 0 .3em;
   margin-right: .2rem;
