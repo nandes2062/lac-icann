@@ -159,3 +159,60 @@
     }
   }
 }
+.card-profile {
+  --pic-width: 130px;
+  @include widget;
+  @include round;
+  display : flex;
+  flex-wrap: wrap;
+  height : 100%;
+  padding: 1rem 1.5rem 0 1rem ;
+  &__img{
+    width: var(--pic-width);
+    height: var(--pic-width);
+    border-radius: 50%;
+  }
+  &__header{
+    width: calc(100% - var(--pic-width));
+    padding-left: 1.5rem;
+    h3{
+      margin-bottom: .2rem;
+      font-weight: 400;
+    }
+    p{
+      margin-bottom: .8rem;
+    }
+  }
+  &__content{
+    width: 100%;
+  }
+  &__footer{
+    flex: 2;
+    &__social, ul{
+      padding-left: 0;
+      a i {
+        margin-top: 0.2rem;
+      }
+    }
+    a {
+      background-color: var(--first-color);
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      display: inline-block;
+      padding: 4px 0 0 1px;
+      text-align: center;
+      transition: .5s background-color;
+      i {
+        color: white;
+      }
+      &:hover{
+        background-color: var(--second-color);
+      }
+    }
+    li{
+      @include clearMenu;
+      display: inline-block;
+    }
+  }
+}
