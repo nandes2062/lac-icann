@@ -5,19 +5,23 @@
     position : relative;
     left : 1rem;
     top : 1px;
+    margin-right: 2rem;
+    overflow-x: auto;
   }
 
   .tab {
     border : 1px solid var(--border-color);
-    padding : 1rem;
-    border-radius : .25rem .25rem 0 0;
+    // padding : 1rem;
+    border-radius : .3rem .3rem 0 0;
     margin-right : .5rem;
-    background : #fff;
+    background : var(--body-bg-color);
     cursor: pointer;
-    opacity : .5;
+    opacity : .65;
+    max-width: 270px;
 
     &.active {
-      border-bottom : 1px solid #fff;
+      border-top: 4px solid var(--second-color);
+      border-bottom : 0px solid var(--body-bg-color);
       opacity : 1;
     }
 
@@ -25,13 +29,22 @@
       width : rem(36px);
       display : block;
     }
-
+    a{
+      display: block;
+      padding: 1rem;
+      &:hover{
+        text-decoration: none;
+      }
+    }
     .tab {
       border : none;
       padding: 0;
       border-radius : 0;
       margin : 0;
       opacity : 1;
+    }
+    &:last-child {
+      margin-right: 2rem;
     }
   }
 
@@ -41,13 +54,14 @@
 
   .panel {
     @include widget;
+    // border : 1px solid var(--second-color);
     display : none;
     border-radius : .25rem;
-    padding : 2rem;
+    padding : 2rem 1rem 1.5rem;
 
-    :last-child {
-      margin-bottom : 0;
-    }
+    // :last-child {
+    //   margin-bottom : 0;
+    // }
 
     &.active {
       display : block;

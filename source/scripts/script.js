@@ -2,6 +2,7 @@ import { menuToggle } from './modules/menu'
 import { getdate } from './modules/date'
 import { edTabs } from './modules/tabs'
 import { goups } from './modules/goup'
+import { magnify } from './modules/magnify'
 // import { videoSize } from "./modules/video";
 
 // Slider VanillaJS (https://github.com/ganlanyuan/tiny-slider)
@@ -38,6 +39,7 @@ const rex = new Vue({
     goups()
     menuToggle()
     getdate()
+    magnify('myimage', 3)
   },
   methods: {
     onChange:function () {

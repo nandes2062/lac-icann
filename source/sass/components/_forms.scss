@@ -16,7 +16,7 @@ form {
     border-radius : .25rem;
     padding       : .3rem .5rem;
     &::placeholder {
-      color : rgba(var(--text-RGB), 0.75);
+      color : #{'hsla(var(--text-HSL), 75%)'};
     }
     &:disabled {
       background :var(--border-color);

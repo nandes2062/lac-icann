@@ -11,7 +11,7 @@
   transition      : transform .05s;
   border          : none;
   text-align      : center;
-  box-shadow      : 0px 3px 4px 0px rgba(var(--dark-RGB), 0.20);  
+  box-shadow      : 0px 3px 4px 0px #{'hsla(var(--dark-HSL), 20%)'};  
 
   &:hover {
     background      : var(--first-color);

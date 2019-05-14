@@ -90,7 +90,7 @@
   .card__content {
     position : absolute;
     bottom : 0;
-    background : rgba(var(--dark-RGB), 0.7);
+    background : #{'hsla(var(--dark-HSL), 70%)'};
     width : 100%;
   }
 
@@ -165,16 +165,28 @@
   @include round;
   display : flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   height : 100%;
   padding: 1rem 1.5rem 0 1rem ;
   &__img{
     width: var(--pic-width);
     height: var(--pic-width);
     border-radius: 50%;
+    object-fit: cover;
+    @include to(480px){
+      display: block;
+      margin: auto;
+    }
   }
   &__header{
     width: calc(100% - var(--pic-width));
     padding-left: 1.5rem;
+    @include to(480px){
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+      padding-left: 0;
+    }
     h3{
       margin-bottom: .2rem;
       font-weight: 400;
