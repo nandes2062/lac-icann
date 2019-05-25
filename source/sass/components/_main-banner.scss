@@ -1,9 +1,11 @@
 .main-banner {
+  --banner-max-height: 380px; 
   background    : var(--first-color);
   color         : #FFF;
   // clip-path     : polygon(0 0, 100% 0, 100% 100%, 0 94%);
   position      : relative;
-  min-height    : 410px;
+  // min-height    : 410px;
+  min-height    : var(--banner-max-height);
   // Separación del contenido
   // padding       : 2rem 0 3rem;
   // @include from(l) { padding: 7rem 0 9rem }
@@ -21,12 +23,34 @@
   width      : 100%;
   height     : 100%;
   object-fit : cover;
+  object-position: left;
   // opacity    : .1;
+  @include from (s) {
+    animation: banner 16s ease-in-out infinite;
+  }
+  @include from (m) {
+    animation: banner 8s ease-in-out infinite;
+  }
+  @include from (l) {
+    animation: banner 5s ease-in-out infinite;
+  }
+  
+}
+@keyframes banner {
+  0% {
+    object-position: left;
+  }
+  50% {
+    object-position: right;
+  }
+  100% {
+    object-position: left;
+  }
 }
 
 .main-banner__data {
   position: relative;
-  height: 408px;
+  min-height: var(--banner-max-height);
   background: #{'hsla(var(--first-HSL), 90%)'};
   left: 50%;
   transform: translateX(-50%);
