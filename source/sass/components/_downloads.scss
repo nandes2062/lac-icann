@@ -6,9 +6,12 @@
   &--item{
     margin-bottom: .5rem;
     padding: .8rem;
-    background: var(--border-color);
+    background: #{'hsla(var(--first-HSL), 30%)'};
     > a{
       @include crossCenter;
+    }
+    &:hover{
+      background: #{'hsla(var(--first-HSL), 60%)'};;
     }
   }
 }

@@ -205,6 +205,13 @@
       a i {
         margin-top: 0.2rem;
       }
+      li {
+        &:before{
+          content: '';
+          font-size: 0;
+          padding-right: 0;
+        }
+      }
     }
     a {
       background-color: var(--first-color);

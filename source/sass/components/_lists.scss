@@ -7,6 +7,28 @@ ul, ol {
   }
 }
 
+.main-main {
+  ul {
+    margin-left : 0;
+    padding-left : 0;
+    li {
+      list-style: none;
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      *margin-right: .3em;
+      &::before {
+        font-size: 1.5rem;
+        // content: "\f054";
+        content: "\f105";
+        padding-right: .75rem;
+        color: var(--first-color);
+      }
+    }
+  }
+}
 .data-list,
 .feature-list {
   @include clearMenu;
