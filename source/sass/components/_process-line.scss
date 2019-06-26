@@ -2,6 +2,7 @@
 	background-color:#FFFFFF;
 	box-shadow: 0 3px 8px -6px #{'hsl(var(--dark-HS), 10%)'};
 	margin-bottom: 1.5rem;
+	overflow: auto;
 }
 h1.md-first-title{
 	color: #FFFFFF;
@@ -13,10 +14,12 @@ h1.md-first-title{
 	background: linear-gradient(var(--first-color), #{'hsl(var(--first-HS), 42%)'});
 	border-radius: 5px 5px 0 0;
 	padding: .5rem 1rem;
+	margin-bottom: 0;
 }
 .md-stepper-horizontal {
 	display:table;
 	width:100%;
+	padding-top: .5rem;
 }
 .md-step {
 	display:table-cell;

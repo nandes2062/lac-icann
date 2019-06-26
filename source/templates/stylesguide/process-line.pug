@@ -7,23 +7,31 @@ block banner
     +banner("https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb", 'Process line en tres estados', '', '', false, true)
 
 block main
-  .md-stepper-horizontal.orange
-    .md-step
-      .md-step-circle
-        span 1
-      .md-step-title En proceso
-      .md-step-bar-left
-      .md-step-bar-right
-    .md-step
-      .md-step-circle
-        span 2
-      .md-step-title En planificación
-      //- .md-step-optional Optional
-      .md-step-bar-left
-      .md-step-bar-right
-    .md-step.md-step-active
-      .md-step-circle
-        span 3
-      .md-step-title Concluido
-      .md-step-bar-left
-      .md-step-bar-right
+  h1.md-first-title #{currentPage}  - Title example
+  .md-stepper
+    .md-stepper-horizontal.orange
+      .md-step
+        .md-step-circle
+          span 1
+        .md-step-title En espera
+        .md-step-bar-left
+        .md-step-bar-right
+      .md-step
+        .md-step-circle
+          span 2
+        .md-step-title En proceso
+        .md-step-bar-left
+        .md-step-bar-right
+      .md-step
+        .md-step-circle
+          span 3
+        .md-step-title En planificación
+        //- .md-step-optional Optional
+        .md-step-bar-left
+        .md-step-bar-right
+      .md-step.md-step-active
+        .md-step-circle
+          span 4
+        .md-step-title Concluido
+        .md-step-bar-left
+        .md-step-bar-right
