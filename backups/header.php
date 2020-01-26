@@ -16,6 +16,9 @@
                 line-height: 20px;
             }
         }
+        .be-style-customizer-title {
+            left: 310px;
+        }
         </style>
         <nav class="rex-nav-top navbar navbar-default">
             <div class="container-fluid">

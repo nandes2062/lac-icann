@@ -110,10 +110,11 @@ body {
   }
   
   a {
-    color : inherit;
+    color: #f0f0f0;
     @include crossCenter;
     @include from(l) {
       height: 4.7rem;
+      color : var(--second-color);
     }
   }
   a.resalt{
